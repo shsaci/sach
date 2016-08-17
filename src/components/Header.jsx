@@ -1,16 +1,17 @@
 import React from 'react'
 
-import Logo from './Logo'
-import Login from './Login'
-import Navigation from './Navigation'
-
 export default React.createClass({
   render () {
     return (
       <div>
-        <Logo siteTitle="Wombat News" />
-        <Navigation />
-        <Login />
+        <div className ="head"> ----HeaderBar----</div>
+         <div className="row top">
+           <div className="one-half column">
+              <button type="button" name="button">Sign Up</button>
+
+              <button type="button" name="button">Login</button>
+          </div>
+        </div>
       </div>
     )
   }
