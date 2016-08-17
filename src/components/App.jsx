@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Footer from './Footer'
 import Header from './Header'
 
 export default React.createClass({
@@ -7,6 +8,7 @@ export default React.createClass({
     return (
       <div className='app-container'>
         <Header />
+        <Footer />
       </div>
     )
   }
