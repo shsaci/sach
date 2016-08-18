@@ -17,7 +17,7 @@ export default React.createClass({
             console.error(err.message)
             return
           }
-          console.log(res.text)
+          console.log(res.body)
         })
     // }, 3000)
   },
