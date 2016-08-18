@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
     "server": "nodemon server.js",
-    "build": "webpack"
+    "build": "webpack",
+    "knex": "knex"
   },
   "keywords": [
     "react"
