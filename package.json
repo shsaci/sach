@@ -1,23 +1,23 @@
 {
-  "name": "wombat-news",
+  "name": "react-work",
   "version": "0.1.0",
-  "description": "Keep up with everything wombaty",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline"
+    "start": "webpack-dev-server --hot --inline",
+    "server": "nodemon server.js"
   },
   "keywords": [
-    "wombat",
-    "news",
     "react"
   ],
-  "author": "Nikau-2016",
-  "license": "ISC",
+  "author": "Sach",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
+    "body-parser": "^1.15.2",
     "eslint": "^3.3.1",
     "eslint-config-standard": "^5.3.5",
     "eslint-plugin-promise": "^2.0.1",
@@ -35,5 +35,14 @@
       "react"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.11.6",
+    "express": "^4.14.0"
+  }
 }

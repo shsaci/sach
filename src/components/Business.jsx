@@ -1,14 +1,14 @@
 import React from 'react'
 
 export default React.createClass({
-  render() {
+  render () {
     return (
       <div className="business">
 
         <div className="row description-bar">
-          <p>P1</p>
+          <p>Description: Lorem ipsum dolor sit amet</p>
 
-          <p>P2</p>
+          <p>Great Britain Formula1.com</p>
 
         </div>
 
