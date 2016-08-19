@@ -1,10 +1,14 @@
 import React from 'react'
 
 export default React.createClass({
+  propTypes: {
+    imgURL: React.PropTypes.string
+  },
+
   render () {
     return (
       <div className="row logo-bar">
-        <img src= 'http://placekitten.com/g/680/190' alt="Logo bar" />
+        <img src= {this.props.imgURL} alt="Logo bar" />
       </div>
     )
   }

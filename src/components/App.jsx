@@ -17,20 +17,46 @@ export default React.createClass({
             console.error(err.message)
             return
           }
-          console.log(res.body)
+          this.setState({
+            abc: this.lbar(res.body),
+            response: res.body
+          })
         })
     // }, 3000)
   },
 
+  lbar (obj) {
+    let arrObj = [obj]
+    let ob = arrObj
+    .map(elem => {
+      return {
+        imageAddress: elem.logoImg,
+        desc1: elem.des1,
+        desc2: elem.des2,
+        saying: elem.blurb
+      }
+    })
+    // console.log(ob)
+    // this.render(ob)
+    this.test(ob)
+    return ob
+  },
+
   getInitialState () {
-    return { woofs: [] }
+    return { response: [] }
+  },
+
+  test (obj) {
+    return console.log(obj[0].imageAddress)
   },
 
   render () {
+    // console.log(this.state.response.logoImg)
+    // console.log(this.state.abc)
     return (
       <div className='app-container'>
         <Header />
-        <LogoBar />
+        <LogoBar imgURL= {this.state.response.logoImg}/>
         <Business />
       </div>
     )

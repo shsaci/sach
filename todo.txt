@@ -1,0 +1,10 @@
+1. display tweets on page
+2. display other info (location, subcriber numbers) on page
+3. submit a tweet
+4. 
+
+.
+.
+.
+8. Apply Less/Sass
+
