@@ -1,5 +1,5 @@
 
-exports.up = function(knex, Promise) {
+exports.up = function (knex, Promise) {
   return knex.schema.createTable('entity', function (table) {
     table.increments('id').primary()
     table.string('logoImg')
@@ -7,8 +7,8 @@ exports.up = function(knex, Promise) {
     table.string('des2')
     table.string('entityID')
   })
-};
+}
 
-exports.down = function(knex, Promise) {
+exports.down = function (knex, Promise) {
   return knex.schema.dropTable('entity')
-};
+}

@@ -1,18 +1,32 @@
 var express = require('express')
-// var development = require('../knexfile').development
-// var knex = require('knex')(development)
+var development = require('../knexfile').development
+var knex = require('knex')(development)
 
 module.exports = {
-  get: get
+  profile: profile,
+  blurbs: blurbs
 }
 
-const testObj = {
-  logoImg: 'http://www.flaredancecompany.com/wp-content/themes/flaredanceco/images/default-banner.jpg',
-  des1: 'Description: The Official Formula 1® Blurb Account',
-  des2: 'Great Britain Formula1.com',
-  blurb: 'My first Blurb is this. Its a very long blurb simply because its my first blurb. That is just the way I am. You got it!!'
+function profile (req, res) {
+  knex('entity')
+  .select()
+  .then(function (users) {
+    console.log(users)
+    res.json(users)
+  })
+  .catch(function (err) {
+    res.status(500).send('DATABASE ERROR ' + err.message)
+  })
 }
 
-function get (req, res) {
-  res.json(testObj)
+function blurbs (req, res) {
+  knex('blurbs')
+  .select()
+  .then(function (allBlurbs) {
+    // console.log(allBlurbs)
+    res.json(allBlurbs)
+  })
+  .catch(function (err) {
+    res.status(500).send('DATABASE ERROR ' + err.message)
+  })
 }

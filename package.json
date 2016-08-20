@@ -28,6 +28,7 @@
     "eslint-plugin-standard": "^2.0.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
+    "react-router": "^2.6.1",
     "react-timer-mixin": "^0.13.3",
     "superagent": "^2.2.0",
     "webpack": "^1.13.1",

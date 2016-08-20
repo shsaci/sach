@@ -9,7 +9,8 @@ import index from './routes/index'
 app.use(cors())
 app.use('/', express.static('public'))
 
-app.get('/', index.get)
+app.get('/', index.profile)
+app.get('/home', index.blurbs)
 
 app.listen(PORT, function () {
   console.log('Listening on port', PORT)

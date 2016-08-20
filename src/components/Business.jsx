@@ -2,8 +2,6 @@ import React from 'react'
 
 export default React.createClass({
   propTypes: {
-    description1: React.PropTypes.string,
-    description2: React.PropTypes.string,
     blurbs: React.PropTypes.string
   },
 
@@ -11,16 +9,10 @@ export default React.createClass({
     return (
       <div className="business">
 
-        <div className="row description-bar">
-          <p>{this.props.description1}</p>
-
-          <p>{this.props.description2}</p>
-        </div>
-
         <div className="row categories">
-          <div className="one-third column">Blurbs</div>
-          <div className="one-third column">Images</div>
-          <div className="one-third column">Likes</div>
+          <div className="one-third column"><a href='#'>Blurbs</a></div>
+          <div className="one-third column"><a href='#'>Images</a></div>
+          <div className="one-third column"><a href='#'>Likes</a></div>
         </div>
 
         <div className="row tweet">

@@ -15,9 +15,10 @@ export default React.createClass({
             return
           }
           this.setState({
-            jason: this.makeObj(res.body),
-            response: res.body
+            jason: this.makeObj(res.body[0]),
+            response: res.body[0]
           })
+          console.log(res.body[0])
         })
   },
 
@@ -26,10 +27,7 @@ export default React.createClass({
     let ob = arrObj
     .map(elem => {
       return {
-        logoUrl: elem.logoImg,
-        desc1: elem.des1,
-        desc2: elem.des2,
-        saying: elem.blurb
+        logoUrl: elem.logoImg, desc1: elem.des1, desc2: elem.des2, saying: elem.blurb
       }
     })
     const resObj = ob[0]
