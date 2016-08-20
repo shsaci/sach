@@ -16,7 +16,7 @@ export default React.createClass({
 
   componentDidMount () {
     request
-        .get('http://127.0.0.1:3000/')
+        .get('http://127.0.0.1:3000/profile/form1')
         .end((err, res) => {
           if (err) {
             console.error(err.message)
@@ -24,20 +24,25 @@ export default React.createClass({
           }
           this.setState({
             jason: res.body[0],
-            response: res.body[0]
+            response: res.body
           })
-          // console.log(this.state.response)
+          // console.log(this.state.jason)
         })
   },
 
   render () {
-    const a = this.state.response
-    console.log(a)
+    const a = this.state.jason
+    console.log(a[0])
+    const ob = this.state.response.map((elem, i) => {
+      return (
+        <Business key={i} blurbs={elem.blurb}/>
+        )
+    })
     return (
       <div className='app-container'>
         <Header />
         <LogoBar imgURL= {a.logoImg} description1= {a.des1} description2={a.des2} />
-        <Business />
+        {ob}
       </div>
     )
   }

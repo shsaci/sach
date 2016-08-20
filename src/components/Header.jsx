@@ -7,13 +7,9 @@ export default React.createClass({
       <div>
         <div className ="row head">
           <Link className="three columns home" to="/">Home</Link>
-          <span className="five columns headerbar">Header Bar</span>
-          <Link className="three columns profile" to="/profile">Profile</Link>
-          </div>
-         <div className="row top">
-              <button className="one-half column" type="button" name="button">Sign Up</button>
-
-              <button className="one-half column" type="button" name="button">Login</button>
+          <button className="button three columns" type="button" name="button">Sign Up</button>
+          <button className="button three columns" type="button" name="button">Login</button>
+          <Link className="two columns profile" to="/profile">Profile</Link>
         </div>
       </div>
     )

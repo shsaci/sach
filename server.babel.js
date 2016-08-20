@@ -9,7 +9,7 @@ import index from './routes/index'
 app.use(cors())
 app.use('/', express.static('public'))
 
-app.get('/', index.profile)
+app.get('/profile/:id', index.profile)
 app.get('/home', index.blurbs)
 
 app.listen(PORT, function () {
