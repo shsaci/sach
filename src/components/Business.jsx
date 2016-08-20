@@ -1,15 +1,20 @@
 import React from 'react'
 
 export default React.createClass({
+  propTypes: {
+    description1: React.PropTypes.string,
+    description2: React.PropTypes.string,
+    blurbs: React.PropTypes.string
+  },
+
   render () {
     return (
       <div className="business">
 
         <div className="row description-bar">
-          <p>Description: Lorem ipsum dolor sit amet</p>
+          <p>{this.props.description1}</p>
 
-          <p>Great Britain Formula1.com</p>
-
+          <p>{this.props.description2}</p>
         </div>
 
         <div className="row categories">
@@ -19,11 +24,11 @@ export default React.createClass({
         </div>
 
         <div className="row tweet">
-          <h5>My first Blurb is this. Its a very long blurb simply because its my first blurb. That is just the way I am. You got it</h5>
+          <h5>{this.props.blurbs}</h5>
           <div className="row action-buttons">
-            <div className="one-third column"><a href="#"><img src="http://placekitten.com/g/130/30" alt="reply" /></a></div>
-            <div className="one-third column"><a href="#"><img src="../images/retweet.png" alt="Re-blurb" /></a></div>
-            <div className="one-third column">Love</div>
+            <div className="one-third column"><a href="#"><img src="../images/reply.png" alt="reply" /></a></div>
+            <div className="one-third column"><a href="#"><img src="../images/retweet.png" alt="re-blurb" /></a></div>
+            <div className="one-third column"><a href="#"><img src="../images/love1.jpg" alt="love" /></a></div>
           </div>
         </div>
       </div>
