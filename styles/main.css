@@ -15,12 +15,15 @@ img.upvote {
 .head {
   background-color: darkblue;
   color: white;
-  height: 60px;
+  font-size: 2rem;
+  height: 40px;
+  padding-top: 10px;
   text-align: center;
 }
 
 .top {
   background-color: blue;
+  font-size: 2rem;
   height: 45px;
   text-align: center;
   padding-top: 15px;

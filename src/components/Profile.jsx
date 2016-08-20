@@ -1,4 +1,5 @@
 import React from 'react'
+
 import request from 'superagent'
 
 import Header from './Header'
@@ -6,6 +7,13 @@ import LogoBar from './LogoBar'
 import Business from './Business'
 
 export default React.createClass({
+  getInitialState () {
+    return {
+      jason: [],
+      response: []
+    }
+  },
+
   componentDidMount () {
     request
         .get('http://127.0.0.1:3000/')
@@ -15,50 +23,21 @@ export default React.createClass({
             return
           }
           this.setState({
-            jason: this.makeObj(res.body[0]),
+            jason: res.body[0],
             response: res.body[0]
           })
-          console.log(res.body[0])
+          // console.log(this.state.response)
         })
   },
 
-  makeObj (obj) {
-    let arrObj = [obj]
-    let ob = arrObj
-    .map(elem => {
-      return {
-        logoUrl: elem.logoImg, desc1: elem.des1, desc2: elem.des2, saying: elem.blurb
-      }
-    })
-    const resObj = ob[0]
-    console.log(resObj)
-    return resObj
-  },
-
-  constructBusiness () {
-    const a = this.state.jason.saying
-    console.log(a)
-    return (
-      <Business description1={this.state.jason.desc1} description2={this.state.jason.desc2}
-      blurbs={this.state.jason.saying}
-        />
-    )
-  },
-
-  getInitialState () {
-    return {
-      jason: {},
-      response: {}
-    }
-  },
-
   render () {
-    this.constructBusiness()
+    const a = this.state.response
+    console.log(a)
     return (
       <div className='app-container'>
         <Header />
-        <LogoBar imgURL= {this.state.jason.logoUrl}/>
-        {this.constructBusiness()}
+        <LogoBar imgURL= {a.logoImg} description1= {a.des1} description2={a.des2} />
+        <Business />
       </div>
     )
   }
