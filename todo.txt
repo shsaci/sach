@@ -1,10 +1,12 @@
-1. display tweets on page
-2. display other info (location, subcriber numbers) on page
-3. submit a tweet
-4. 
-
+1. display all relevant tweets on page (home and profile)
+2. define different pages (home and profile)
+3. submit a tweet:
+3.1 design compose-tweet page
+3.2 forms in react? post request in server
+4. Read on redux and apply?
+5. Read on cyclops?
 .
 .
+6. display other info (location, subcriber numbers) on page
 .
 8. Apply Less/Sass
-

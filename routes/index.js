@@ -4,12 +4,14 @@ var knex = require('knex')(development)
 
 module.exports = {
   blurbs: blurbs,
-  profile: profile
+  profile: profile,
+  add: add
 }
 
 function blurbs (req, res) {
-  knex('blurbs')
-  .select()
+  knex('entity')
+  .join('blurbs', 'entity.entityID', '=', 'blurbs.entityID')
+  .orderBy('time', 'desc')
   .then(function (allBlurbs) {
     res.json(allBlurbs)
   })
@@ -32,4 +34,23 @@ function profile (req, res) {
   .catch(function (err) {
     res.status(500).send('DATABASE ERROR ' + err.message)
   })
+}
+
+function add (req, res) {
+  const id = req.params.id
+  const blurb = req.body.blurb
+  const time = req.body.time
+  console.log(id, blurb, time)
+  knex('blurbs')
+    .insert({
+      entityID: id,
+      blurb: blurb,
+      time: time
+    })
+    .then(function () {
+      res.status(201).send()
+    })
+    .catch(function (err) {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 }

@@ -49,12 +49,11 @@ export default React.createClass({
     console.log(a)
     const ob = this.state.jason.map((elem, i) => {
       return (
-        <Business key={i} blurbs={elem.blurb}/>
+        <Business key={i} blurbs={elem.blurb} miniLogo={elem.miniLogo}/>
         )
     })
     return (
-      <div className='app-container'>
-        <Header />
+      <div className="main">
         {ob}
       </div>
     )

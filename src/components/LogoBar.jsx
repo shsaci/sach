@@ -18,6 +18,12 @@ export default React.createClass({
 
         <p>{this.props.description2}</p>
       </div>
+
+      <div className="row categories">
+        <div className="one-third column"><a href='#'>Blurbs</a></div>
+        <div className="one-third column"><a href='#'>Images</a></div>
+        <div className="one-third column"><a href='#'>Likes</a></div>
+      </div>
     </div>
     )
   }

@@ -4,9 +4,35 @@ a {
   text-decoration: none;
 }
 
+button {
+  background-color: blue;
+}
+
+.action-buttons {
+  background-color: yellow;
+  height: 50px;
+  text-align: center;
+}
+
+.business {
+  margin: 0 35px;
+}
+
+.categories {
+  background-color: grey;
+  height: 42px;
+  text-align: center;
+  padding-top: 18px;
+}
+
+.description-bar {
+  background-color: magenta;
+  height: 130px;
+  padding: 50px 0 0 15px;
+}
+
 .head {
   background-color: darkblue;
-  color: white;
   font-size: 2rem;
   height: 50px;
   padding-top: 13px;
@@ -18,31 +44,17 @@ a {
   height: 200px;
 }
 
-.description-bar {
-  background-color: magenta;
-  height: 130px;
-  padding-top: 50px;
+.minilogo {
+  padding: 15px 15px 0 0;
+  width:70px;
 }
 
-.business {
-  margin: 0 35px
-}
-
-.categories {
-  background-color: grey;
-  height: 42px;
-  text-align: center;
-  padding-top: 18px;
+.tweetbox {
+  background-color: green;
+  height: 200px;
+  padding: 15px;
 }
 
 .tweet {
-  background-color: green;
-  height: 200px;
-}
-
-.action-buttons {
-  background-color: yellow;
-  height: 50px;
-  margin-top: 100px;
-  text-align: center;
+  font-size: 2rem;
 }
