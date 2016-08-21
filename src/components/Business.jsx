@@ -17,7 +17,7 @@ export default React.createClass({
           </div>
 
           <div className="row action-buttons">
-            <div className="one-third column"><Link to="/about"><img src="../images/reply.png" alt="reply" /></Link></div>
+            <div className="one-third column"><Link to="/compose"><img src="../images/reply.png" alt="reply" /></Link></div>
             <div className="one-third column"><a href="#"><img src="../images/retweet.png" alt="re-blurb" /></a></div>
             <div className="one-third column"><a href="#"><img src="../images/love1.jpg" alt="love" /></a></div>
           </div>

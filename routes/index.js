@@ -27,6 +27,7 @@ function profile (req, res) {
   .where('entity.entityID', p)
   .join('blurbs', 'entity.entityID', '=', 'blurbs.entityID')
   .select()
+  .orderBy('time', 'desc')
   .then(function (users) {
     console.log(users)
     res.json(users)
