@@ -26,13 +26,13 @@ export default React.createClass({
   postToServer: function (i, b) {
     const t = Date.now()
     request
-    .post('http://127.0.0.1:3000/profile/form2')
+    .post('http://127.0.0.1:3000/profile/form1')
     .send({ "blurb": b, "time": t })
     .end(function (err, res) {
       if (err || !res.ok) {
         console.error('Oh no! error')
       } else {
-        console.log('yay got ' + (res.body))
+        console.log('yay got it')
       }
     })
   },
