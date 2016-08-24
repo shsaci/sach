@@ -6,15 +6,13 @@ a {
 
 body {
   background-color: #ffd700;
+  font-family: 'Raleway', sans-serif;
 }
 
 button {
   background-color: blue;
+  color: white;
 }
-
-/*div {
-  border-radius: 25px;
-}*/
 
 .action-buttons {
   background-color: yellow;
@@ -29,7 +27,8 @@ button {
 }
 
 .categories {
-  background-color: grey;
+  background-color: #ef0404;
+  color: #04f5c1;
   height: 42px;
   text-align: center;
   padding-top: 18px;
@@ -37,12 +36,15 @@ button {
 
 .description-bar {
   background-color: red;
+  color: #f5eeee;
+  font-family: 'Lobster', cursive;
+  font-size: 2.2rem
   height: 130px;
   padding: 50px 0 0 15px;
 }
 
 .head {
-  background-color: darkblue;
+  background-color: blue;
   font-size: 2rem;
   height: 50px;
   padding-top: 13px;
@@ -55,17 +57,20 @@ button {
 }
 
 .minilogo {
-  padding: 15px 15px 0 0;
+  border-radius: 10px;
+  padding: 20px 0 0 0;
   width:70px;
 }
 
 .tweetbox {
-  background-color: green;
+  background-color: #2a67a7;
   border-radius: 15px;
   height: 200px;
   padding: 15px;
 }
 
 .tweet {
+  color: white;
   font-size: 2rem;
+  padding: 20px 25px 0 20px;
 }

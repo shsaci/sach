@@ -31,19 +31,6 @@ export default React.createClass({
     })
   },
 
-// render () {
-//     return (
-//       <div>
-//         <body>
-//           <Link to="/">Home</Link>
-//           <Link to="/profile">Profile</Link>
-//         </body>
-//         {this.props.children}
-//       </div>
-//     )
-//   }
-// }),
-
   render () {
     const a = this.state.jason
     console.log(a)
