@@ -16,7 +16,7 @@ export default React.createClass({
 
   componentDidMount () {
     request
-        .get('http://127.0.0.1:3000/profile/user3')
+        .get('http://127.0.0.1:3000/profile/user4')
         .end((err, res) => {
           if (err) {
             console.error(err.message)
@@ -26,7 +26,6 @@ export default React.createClass({
             jason: res.body[0],
             response: res.body
           })
-          console.log(this.state.response)
         })
   },
 
