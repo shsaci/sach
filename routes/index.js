@@ -38,7 +38,7 @@ function profile (req, res) {
 }
 
 function add (req, res) {
-  const id = req.params.id
+  const id = req.body.id
   const blurb = req.body.blurb
   const time = req.body.time
   console.log(id, blurb, time)

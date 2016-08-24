@@ -26,8 +26,8 @@ export default React.createClass({
   postToServer: function (i, b) {
     const t = Date.now()
     request
-    .post('http://127.0.0.1:3000/compose/form3')
-    .send({ "blurb": b, "time": t })
+    .post('http://127.0.0.1:3000/compose/')
+    .send({ 'id': i, 'blurb': b, 'time': t })
     .end(function (err, res) {
       if (err || !res.ok) {
         console.error('Oh no! error')

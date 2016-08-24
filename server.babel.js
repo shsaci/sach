@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/profile/:id', index.profile)
 app.get('/home', index.blurbs)
-app.post('/compose/:id', index.add)
+app.post('/compose', index.add)
 
 app.listen(PORT, function () {
   console.log('Listening on port', PORT)
