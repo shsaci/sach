@@ -5,7 +5,8 @@ var knex = require('knex')(development)
 module.exports = {
   blurbs: blurbs,
   profile: profile,
-  add: add
+  compose: compose,
+  friend: friend
 }
 
 function blurbs (req, res) {
@@ -37,7 +38,7 @@ function profile (req, res) {
   })
 }
 
-function add (req, res) {
+function compose (req, res) {
   const id = req.body.id
   const blurb = req.body.blurb
   const time = req.body.time
@@ -54,4 +55,8 @@ function add (req, res) {
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
+}
+
+function friend (req, res) {
+  return
 }
