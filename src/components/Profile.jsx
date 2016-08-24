@@ -16,7 +16,7 @@ export default React.createClass({
 
   componentDidMount () {
     request
-        .get('http://127.0.0.1:3000/profile/user4')
+        .get('http://127.0.0.1:3000/profile/user3')
         .end((err, res) => {
           if (err) {
             console.error(err.message)

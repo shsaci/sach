@@ -8,7 +8,8 @@ exports.seed = function (knex, Promise) {
         knex('friends').insert({id: 1, entityID: 'user1', friendID: 'user2'}),
         knex('friends').insert({id: 2, entityID: 'user2', friendID: 'user1'}),
         knex('friends').insert({id: 3, entityID: 'user3', friendID: 'user4'}),
-        knex('friends').insert({id: 4, entityID: 'user4', friendID: 'user3'})
+        knex('friends').insert({id: 4, entityID: 'user4', friendID: 'user3'}),
+        knex('friends').insert({id: 5, entityID: 'user2', friendID: 'user3'})
       ])
     })
 }
